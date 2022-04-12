@@ -6,9 +6,9 @@
     <rosparam subst_value="true">      
       # input parameters
       subscribe_point_cloud: false
-      rgb_topic: /camera/color/image_raw
-      depth_topic: /camera/aligned_depth_to_color/image_raw
-      cloud_topic: /camera/depth_registered/points
+      rgb_topic: /rgb/image_raw
+      depth_topic: /depth_to_rgb/image_raw
+      cloud_topic: /points2
 
       # output parameters
       output_lcm_channel: "OPENNI_FRAME"
