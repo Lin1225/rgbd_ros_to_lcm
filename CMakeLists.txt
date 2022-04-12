@@ -16,7 +16,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 find_package(lcm REQUIRED)
-find_package(PCL REQUIRED)
+find_package(PCL)
 
 
 ###################################
