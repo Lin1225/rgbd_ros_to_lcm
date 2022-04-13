@@ -467,6 +467,15 @@ public:
       //$ convert channel order
       cv::cvtColor(rgb, rgb, CV_RGB2BGR);
       }
+    else if (rgb_msg->encoding == sensor_msgs::image_encodings::BGRA8)
+    {
+      ROS_WARN("Encoding is bgra8, converting channel oder");
+      cv::cvtColor(rgb, rgb, CV_RGBA2BGR);
+      //center_crop here
+      // cv::Rect rect(160, 0,960,720);
+      // cv::Mat roi= rgb(rect);
+      // cv::resize(rgb,rgb,cv::Size(640,480));
+    }
     else
     {
       ROS_ERROR("Unexpected image encoding %s in input RGB image, only bgr8 and rgb8 encodings are supported.", rgb_msg->encoding.c_str());
